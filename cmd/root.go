@@ -28,13 +28,13 @@ type service struct {
 
 var services = []service{
 	{
-		"quay-app", "quay.io/projectquay/quay:latest", "/etc/systemd/system/quay-app.service", quayServiceBytes,
+		"quay-app", "registry.redhat.io/quay/quay-rhel8:v3.4.1", "/etc/systemd/system/quay-app.service", quayServiceBytes,
 	},
 	{
-		"quay-postgres", "docker.io/centos/postgresql-10-centos8", "/etc/systemd/system/quay-postgres.service", postgresServiceBytes,
+		"quay-postgres", "registry.redhat.io/rhel8/postgresql-10:1", "/etc/systemd/system/quay-postgres.service", postgresServiceBytes,
 	},
 	{
-		"quay-redis", "docker.io/centos/redis-5-centos8", "/etc/systemd/system/quay-redis.service", redisServiceBytes,
+		"quay-redis", "registry.redhat.io/rhel8/redis-5:1", "/etc/systemd/system/quay-redis.service", redisServiceBytes,
 	},
 }
 
