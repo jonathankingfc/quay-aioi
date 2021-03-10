@@ -38,7 +38,7 @@ $ sudo ./quay-installer install -v
 
 This command will make the following changes to your machine
 
-- Pulls Quay, Redis, and Postgres containers from quay.io
+- Pulls Quay, Redis, and Postgres containers from registry.redhat.io
 - Sets up systemd files on host machine to ensure that container runtimes are persistent
 - Creates `~/quay-install` in `$HOME` which contains install files, local storage, and config bundle. This will generally be in `/root/quay-install`.
 

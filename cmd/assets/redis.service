@@ -16,7 +16,7 @@ ExecStart=/usr/bin/podman run \
     --cidfile %t/%n-cid \
     --cgroups=no-conmon \
     --replace \
-    docker.io/centos/redis-5-centos8
+    registry.redhat.io/rhel8/redis-5:1
 
 ExecStop=-/usr/bin/podman stop --ignore --cidfile %t/%n-cid -t 10
 ExecStopPost=-/usr/bin/podman rm --ignore -f --cidfile %t/%n-cid
