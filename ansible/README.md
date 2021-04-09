@@ -14,7 +14,7 @@ To install the necessary prereqs, run the following commands:
 ```console
 $ sudo pip3 install --upgrade pip
 $ pip install ansible
-$ sudo yum module install -y container-tools
+$ sudo yum module install -y container-tools container-selinux policycoreutils-python-utils podman
 ```
 
 ### Installation
