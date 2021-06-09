@@ -1,0 +1,11 @@
+- name: Autodetecting Image Archive
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ansible check file exists.
+      stat:
+        path: /home/jonathan/image-archive.tar
+      register: p
+    - name: Image Archive Found. Loading Images.
+      command: podman load -i /home/jonathan/image-archive.tar
+      when: p.stat.exists
